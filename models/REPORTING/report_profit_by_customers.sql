@@ -1,8 +1,4 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
+
 
 
 select customer_id,segment,country, sum(total_profit) as profit
