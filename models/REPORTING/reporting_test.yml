@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: report_profit_by_customers
+    columns:
+      - name: segment
+        tests:
+          - accepted_values:
+              values:
+                - "Home Office"
+                - "Corporate"
+                - "Consumer"
