@@ -3,7 +3,7 @@ version: 2
 models:
   - name: raw_customers
     columns:
-      - name: customer_id
+      - name: customerid
         tests:
           - unique
           - not_null

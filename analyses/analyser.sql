@@ -1,1 +1,1 @@
-with cte as (select * from raw.globalmart.orders) select * from cte limit 100
+select * from {{ref('raw_customers')}}

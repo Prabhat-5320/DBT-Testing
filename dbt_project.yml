@@ -7,7 +7,7 @@ version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'default'
+profile: 'global_mart'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -39,8 +39,17 @@ models:
   global_mart:
     # Applies to all files under models/example/
     RAW:
+      +database : pg
+      +schema : raw
+      +transient : false
       +materialized: table
     STAGE :
-      +materialized: view
+      +database : pg
+      +schema : stage
+      +transient : false
+      +materialized: table
     REPORTING :
+      +database : pg
+      +schema : reporting
+      +transient : false
       +materialized: table
