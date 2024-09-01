@@ -53,3 +53,4 @@ models:
       +schema : reporting
       +transient : false
       +materialized: table
+      +tags : p1
