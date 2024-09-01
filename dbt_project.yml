@@ -39,17 +39,17 @@ models:
   global_mart:
     # Applies to all files under models/example/
     RAW:
-      +database : pg
+      +database : "{{target.name}}"
       +schema : raw
       +transient : false
       +materialized: table
     STAGE :
-      +database : pg
+      +database : "{{target.name}}"
       +schema : stage
       +transient : false
       +materialized: table
     REPORTING :
-      +database : pg
+      +database : "{{target.name}}"
       +schema : reporting
       +transient : false
       +materialized: table

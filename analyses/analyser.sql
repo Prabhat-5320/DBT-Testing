@@ -1,1 +1,1 @@
-select * from {{ref('raw_customers')}}
+select '{{ target.name }}' as current_v 
